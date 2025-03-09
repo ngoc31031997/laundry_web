@@ -2,12 +2,11 @@ document.getElementById('contactForm').addEventListener('submit', async function
     event.preventDefault();
 
     const data = {
-        customer_name: document.getElementById('name').value,
-        created_by: "Admin",
-        customer_email: document.getElementById('email').value,
-        customer_phone: "0123456789",
-        order_date: new Date().toISOString().split('T')[0],
-        notes: document.getElementById('message').value
+        note: document.getElementById('note').value,
+        address: document.getElementById('address').value,
+        name:  document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
     };
 
     console.log("Sending data:", data);
