@@ -18,7 +18,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)
         });
-
+        //test commit
         const result = await response.json();
         console.log("Server response:", result);
         alert("Order submitted successfully!");
