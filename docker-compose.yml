@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  backend:
+    build: ./server
+    ports:
+      - "3001:3001"
+    restart: always
+    environment:
+      - NODE_ENV=production
+
+  frontend:
+    build: ./client
+    ports:
+      - "8080:80"
+    restart: always
+    depends_on:
+      - backend
